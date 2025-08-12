@@ -136,6 +136,35 @@
             border-radius: 8px !important;
             color: #721c24 !important;
         }
+
+        /* Mobile responsive styles */
+        @media screen and (max-width: 768px) {
+            .flowise-chat-title {
+                font-size: 16px !important;
+            }
+            
+            .flowise-starter-prompt {
+                font-size: 13px !important;
+                padding: 10px 14px !important;
+                margin: 6px 3px !important;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .flowise-chat-header {
+                padding: 15px !important;
+            }
+            
+            .flowise-chat-title {
+                font-size: 14px !important;
+            }
+            
+            .flowise-starter-prompt {
+                font-size: 12px !important;
+                padding: 8px 12px !important;
+                margin: 4px 2px !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -260,24 +289,155 @@
                         box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4) !important;
                     }
                     
+                    /* FIXED: Starter Prompts Horizontal Scrolling */
+                    .flowise-starterprompts {
+                        display: flex !important;
+                        flex-wrap: nowrap !important;
+                        overflow-x: auto !important;
+                        overflow-y: hidden !important;
+                        padding: 12px 16px !important;
+                        gap: 10px !important;
+                        margin: 0 !important;
+                        width: 100% !important;
+                        box-sizing: border-box !important;
+                        -webkit-overflow-scrolling: touch !important;
+                    }
+                    
+                    /* Custom Scrollbar for starter prompts */
+                    .flowise-starterprompts::-webkit-scrollbar {
+                        height: 4px !important;
+                    }
+                    
+                    .flowise-starterprompts::-webkit-scrollbar-track {
+                        background: rgba(0, 0, 0, 0.05) !important;
+                        border-radius: 2px !important;
+                    }
+                    
+                    .flowise-starterprompts::-webkit-scrollbar-thumb {
+                        background: rgba(76, 175, 80, 0.4) !important;
+                        border-radius: 2px !important;
+                    }
+                    
+                    .flowise-starterprompts::-webkit-scrollbar-thumb:hover {
+                        background: rgba(76, 175, 80, 0.6) !important;
+                    }
+                    
                     .flowise-starterprompt {
                         background: white !important;
                         border: 2px solid #e9ecef !important;
                         border-radius: 12px !important;
-                        padding: 12px 16px !important;
-                        margin: 8px 4px !important;
+                        padding: 10px 16px !important;
                         color: #333 !important;
                         font-size: 14px !important;
                         transition: all 0.3s ease !important;
                         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
                         cursor: pointer !important;
+                        white-space: nowrap !important;
+                        flex-shrink: 0 !important;
+                        min-width: max-content !important;
+                        margin: 0 !important;
+                        line-height: 1.4 !important;
+                        font-weight: 500 !important;
                     }
                     
                     .flowise-starterprompt:hover {
                         border-color: #4CAF50 !important;
                         background: #f8f9fa !important;
-                        transform: translateY(-2px) !important;
+                        transform: translateY(-1px) !important;
                         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+                    }
+                    
+                    /* Mobile specific styles for starter prompts */
+                    @media screen and (max-width: 768px) {
+                        .flowise-title {
+                            font-size: 16px !important;
+                        }
+                        
+                        .flowise-starterprompts {
+                            padding: 10px 12px !important;
+                            gap: 8px !important;
+                        }
+                        
+                        .flowise-starterprompt {
+                            font-size: 13px !important;
+                            padding: 8px 14px !important;
+                            border-radius: 10px !important;
+                        }
+                        
+                        .flowise-textinput {
+                            font-size: 14px !important;
+                            padding: 10px 14px !important;
+                        }
+                        
+                        .flowise-sendbutton {
+                            width: 36px !important;
+                            height: 36px !important;
+                        }
+                    }
+                    
+                    @media screen and (max-width: 480px) {
+                        .flowise-header {
+                            padding: 15px 12px !important;
+                        }
+                        
+                        .flowise-title {
+                            font-size: 15px !important;
+                        }
+                        
+                        .flowise-messagelist {
+                            padding: 12px !important;
+                        }
+                        
+                        .flowise-starterprompts {
+                            padding: 8px 10px !important;
+                            gap: 6px !important;
+                        }
+                        
+                        .flowise-starterprompt {
+                            font-size: 12px !important;
+                            padding: 6px 12px !important;
+                            border-radius: 8px !important;
+                        }
+                        
+                        .flowise-textinput {
+                            font-size: 13px !important;
+                            padding: 8px 12px !important;
+                        }
+                        
+                        .flowise-sendbutton {
+                            width: 32px !important;
+                            height: 32px !important;
+                        }
+                        
+                        .flowise-botmessage, .flowise-usermessage {
+                            padding: 10px 14px !important;
+                            margin: 6px 0 !important;
+                        }
+                    }
+                    
+                    @media screen and (max-width: 360px) {
+                        .flowise-starterprompts {
+                            padding: 6px 8px !important;
+                            gap: 4px !important;
+                        }
+                        
+                        .flowise-starterprompt {
+                            font-size: 11px !important;
+                            padding: 5px 10px !important;
+                            border-radius: 6px !important;
+                        }
+                        
+                        .flowise-header {
+                            padding: 12px 8px !important;
+                        }
+                        
+                        .flowise-title {
+                            font-size: 14px !important;
+                        }
+                        
+                        .flowise-messagelist {
+                            padding: 8px !important;
+                        }
                     }
                     
                     .flowise-footer {
@@ -302,16 +462,16 @@
                     width: '100%',
                     fontSize: 16,
                     starterPrompts: [
-                        "What are the different types of batteries you offer?",
-                        "What is the warranty period for your batteries?",
-                        "Can you provide a description of the 'Tubular Jumbo' product type?",
-                        "What is the difference between a 'Tubular' and 'Tubular Jumbo' battery?",
-                        "What is the capacity and voltage of the model 'C20 120 AH (TOWER TYPE)'?",
-                        "How many months of warranty does the 'C10 200 AH (JUMBO TYPE)' battery have?",
-                        "What is the technology used in the battery with the model name 'C20 220 AH'?",
-                        "Do you have any 220 AH capacity batteries?",
-                        "What are the different product types available in 12V voltage?",
-                        "Can you list all the batteries that come with a 60-month warranty?",
+                        "What types of batteries do you offer?",
+                        "What is the warranty period?",
+                        "Tell me about Tubular Jumbo batteries",
+                        "Difference between Tubular vs Tubular Jumbo?",
+                        "C20 120 AH Tower Type capacity?",
+                        "C10 200 AH Jumbo warranty months?",
+                        "C20 220 AH battery technology?",
+                        "Do you have 220 AH batteries?",
+                        "12V voltage product types?",
+                        "60-month warranty batteries list?"
                     ],
                     starterPromptFontSize: 15,
                     clearChatOnReload: false,
